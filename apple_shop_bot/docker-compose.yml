@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  bot:
+    build: .
+    container_name: apple_shop_bot
+    env_file:
+      - .env
+    restart: unless-stopped

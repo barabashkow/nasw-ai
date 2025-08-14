@@ -1,0 +1,14 @@
+[Unit]
+Description=Apple Shop Telegram Bot
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/workspace/apple_shop_bot
+EnvironmentFile=/workspace/apple_shop_bot/.env
+ExecStart=/usr/bin/python3 /workspace/apple_shop_bot/main.py
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
